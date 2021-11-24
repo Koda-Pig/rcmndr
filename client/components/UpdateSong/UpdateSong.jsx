@@ -41,44 +41,39 @@ function UpdateSong (props) {
         <p>Song does not exist.</p>
       }
       {song &&
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="mediaName">Song title*
-            <input type="text"
-              id='mediaName'
-              name='mediaName'
-              value={editForm.mediaName}
-              onChange={handleChange}/>
-          </label><br />
-          <label htmlFor="artist">Artist*
-            <input type="text"
-              id='artist'
-              name='artist'
-              value={editForm.artist}
-              onChange={handleChange}/>
-          </label><br />
-          <label htmlFor="genre">Genre
-            <input type="text"
-              id='genre'
-              name='genre'
-              value={editForm.genre}
-              onChange={handleChange}/>
-          </label><br />
+        <form onSubmit={handleSubmit} className='newSongForm'>
+          <label htmlFor="mediaName">Song title*</label>
+          <input type="text"
+            id='mediaName'
+            name='mediaName'
+            value={editForm.mediaName}
+            onChange={handleChange}/>
+          <label htmlFor="artist">Artist*</label>
+          <input type="text"
+            id='artist'
+            name='artist'
+            value={editForm.artist}
+            onChange={handleChange}/>
+          <label htmlFor="genre">Genre</label>
+          <input type="text"
+            id='genre'
+            name='genre'
+            value={editForm.genre}
+            onChange={handleChange}/>
           {/* comment related functionality to be removed */}
-          <label htmlFor="comment">Comment
-            <input type="text"
-              id='comment'
-              name='comment'
-              value={editForm.comment}
-              onChange={handleChange}/>
-          </label><br />
+          <label htmlFor="comment">Comment</label>
+          <input type="text"
+            id='comment'
+            name='comment'
+            value={editForm.comment}
+            onChange={handleChange}/>
           {/* comment related functionality to be removed */}
-          <label htmlFor="link">Link
-            <input type="text"
-              id='link'
-              name='link'
-              value={editForm.link}
-              onChange={handleChange}/>
-          </label>
+          <label htmlFor="link">Link</label>
+          <input type="text"
+            id='link'
+            name='link'
+            value={editForm.link}
+            onChange={handleChange}/>
           <button onClick={handleSubmit}>SAVE</button>
         </form>
       }
